@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q&A Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .container {
+      background: rgba(0,0,0,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      width: 350px;
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #00ffcc;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00ddb3;
+    }
+
+    #answer {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Ask Me Anything</h2>
+  <input type="text" id="question" placeholder="Type your question">
+  <br>
+  <button onclick="answerQuestion()">Ask</button>
+  <div id="answer"></div>
+</div>
+
+<script>
+  function answerQuestion() {
+    let q = document.getElementById("question").value.toLowerCase();
+    let answer = "invaild question";
+
+    if (q.includes("define motion")) {
+      answer = "The state in which one object’s distance from another is changing.";
+    } 
+    else if (q.includes("define reference point")) {
+      answer = "A place or object used for comparison to determine if an object is in motion.";
+    } 
+    else if (q.includes("define force")) {
+      answer = "A push or pull exerted on an object.";
+    } 
+    else if (q.includes("define newton")) {
+      answer = "A unit of measure that equals the force required to accelerate 1 kilogram of mass at 1 meter per second.";
+    }
+    else if (q.includes("define friction")) {
+      answer = "The force that two surfaces exert on each other when they rub against each other.";
+    } 
+    else if (q.includes("define net force")) {
+      answer = "The overall force on an object when all the individual forces acting on it are added together.";
+    } 
+    else if (q.includes("define gravity")) {
+      answer = "The attractive force between objects; the force that moves objects downhill.";
+    } 
+    else if (q.includes("define speed")) {
+      answer = "The distance an object travels per unit of time.";
+    } 
+    else if (q.includes("define slope")) {
+      answer = "The steepness of a graph line; the ratio of the vertical change (the rise) to the horizontal change (the run).";
+    } 
+    else if (q.includes("define velocity")) {
+      answer = "Speed in a given direction.";
+    } 
+    else if (q.includes("define acceleration")) {
+      answer = "The rate at which velocity changes.";
+    } 
+    else if (q.includes("define inertia")) {
+      answer = "The tendency of an object to resist a change in motion.";
+    } 
+    else if (q.includes("define weight")) {
+      answer = "A measure of the force of gravity acting on an object.";
+    } 
+
+    document.getElementById("answer").innerText = answer;
+  }
+</script>
+
+</body>
+</html>
